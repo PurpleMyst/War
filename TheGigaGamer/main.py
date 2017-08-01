@@ -32,12 +32,12 @@ def war():
         del playerA[0:4]
         del playerB[0:4]
         if hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
-            print "Player A wins the war!"
+            print ("Player A wins the war!")
             playerA.append(winnings)
             playerA.append(playerA[0])
             playerA.append(playerB[0])
         elif hierarchy.index(playerA[0]) < hierarchy.index(playerB[0]):
-            print "Player B wins the war!"
+            print ("Player B wins the war!")
             playerB.append(winnings)
             playerB.append(playerA[0])
             playerB.append(playerB[0])
@@ -49,11 +49,11 @@ while ((len(playerA) > 0) and (len(playerB) > 0)):
     if playerA[0] == playerB[0]:
         war()
     elif hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
-        print "Player A wins the card!"
+        print ("Player A wins the card!")
         playerA.append(playerB[0])
         playerA.append(playerA[0])
     else:
-        print "Player B wins the card!"
+        print ("Player B wins the card!")
         playerB.append(playerB[0])
         playerB.append(playerA[0])
     del playerA[0]
@@ -61,6 +61,6 @@ while ((len(playerA) > 0) and (len(playerB) > 0)):
     print ("Player A has " + str(len(playerA)) + " cards!")
     print ("Player B has " + str(len(playerB)) + " cards!") 
 if len(playerA) == 0:
-    print "Player B wins!"
+    print ("Player B wins!")
 elif len(playerB) == 0:
-    print "Player A wins!"
+    print ("Player A wins!")
