@@ -1,4 +1,4 @@
-import randint from random
+from random import randint
 
 playerA = []
 playerB = []
