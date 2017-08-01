@@ -17,7 +17,7 @@ def dealCards():
 def compare(a, b):
     if hierarchy.index(a) > hierarchy.index(b):
         return 0
-    elif hierarchy.index(a) < hierarchy.index(b)
+    elif hierarchy.index(a) < hierarchy.index(b):
         return 1
     
 
@@ -43,7 +43,7 @@ def war():
             playerB.append(playerB[0])
 
 dealCards()
-while ((len(playerA) > 0) and (len(playerB) > 0))
+while ((len(playerA) > 0) and (len(playerB) > 0)):
     print ("Player A plays a" + playerA[0] + "!")
     print ("Player B plays a" + playerB[0] + "!")
     if playerA[0] == playerB[0]:
@@ -60,7 +60,7 @@ while ((len(playerA) > 0) and (len(playerB) > 0))
     del playerB[0]
     print ("Player A has " + str(len(playerA)) + " cards!")
     print ("Player B has " + str(len(playerB)) + " cards!") 
-if len(playerA) == 0
+if len(playerA) == 0:
     print "Player B wins!"
-elif len(playerB) == 0
+elif len(playerB) == 0:
     print "Player A wins!"
