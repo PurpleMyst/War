@@ -25,12 +25,24 @@ def war():
     winnings= []
     while playerA[0] == playerB[0]:
         print ("War!")
-        winnings.append(playerA[0:4])
-        winnings.append(playerB[0:4])
-        del playerA[0:4]
-        del playerB[0:4]
-        print ("Player A plays a" + playerA[0] + "!")
-        print ("Player B plays a" + playerB[0] + "!")
+        winnings.append(playerA[0])
+        winnings.append(playerA[1])
+        winnings.append(playerA[2])
+        winnings.append(playerA[3])
+        winnings.append(playerB[0])
+        winnings.append(playerB[1])
+        winnings.append(playerB[2])
+        winnings.append(playerB[3])
+        del playerA[0]
+        del playerA[1]
+        del playerA[2]
+        del playerA[3]
+        del playerB[0]
+        del playerB[1]
+        del playerB[2]
+        del playerB[3]
+        print ("Player A plays a " + playerA[0] + "!")
+        print ("Player B plays a " + playerB[0] + "!")
         if hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
             print ("Player A wins the war!")
             playerA.append(winnings)
