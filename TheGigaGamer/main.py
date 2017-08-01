@@ -25,12 +25,12 @@ def war():
     winnings= []
     while playerA[0] == playerB[0]:
         print ("War!")
-        print ("Player A plays a" + playerA[0] + "!")
-        print ("Player B plays a" + playerB[0] + "!")
         winnings.append(playerA[0:4])
         winnings.append(playerB[0:4])
         del playerA[0:4]
         del playerB[0:4]
+        print ("Player A plays a" + playerA[0] + "!")
+        print ("Player B plays a" + playerB[0] + "!")
         if hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
             print ("Player A wins the war!")
             playerA.append(winnings)
@@ -44,8 +44,8 @@ def war():
 
 dealCards()
 while ((len(playerA) > 0) and (len(playerB) > 0)):
-    print ("Player A plays a" + playerA[0] + "!")
-    print ("Player B plays a" + playerB[0] + "!")
+    print ("Player A plays a " + str(playerA[0]) + "!")
+    print ("Player B plays a " + str(playerB[0]) + "!")
     if playerA[0] == playerB[0]:
         war()
     elif hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
