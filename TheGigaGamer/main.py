@@ -9,10 +9,10 @@ def dealCards():
     while len(cards) > 0:
         x = randint(0,len(cards)-1)
         playerA.append(cards[x])
-        del.cards[x]
+        del cards[x]
         x = randint(0,len(cards)-1)
         playerB.append(cards[x])
-        del.cards[x]                #cards are dealt in a random order, thus they are shuffled during dealing
+        del cards[x]                #cards are dealt in a random order, thus they are shuffled during dealing
 
 def compare(a, b):
     if hierarchy.index(a) > hierarchy.index(b):
@@ -29,8 +29,8 @@ def war():
         print ("Player B plays a" + playerB[0] + "!")
         winnings.append(playerA[0:4])
         winnings.append(playerB[0:4])
-        del.playerA[0:4]
-        del.playerB[0:4]
+        del playerA[0:4]
+        del playerB[0:4]
         if hierarchy.index(playerA[0]) > hierarchy.index(playerB[0]):
             print "Player A wins the war!"
             playerA.append(winnings)
@@ -56,8 +56,8 @@ while ((len(playerA) > 0) and (len(playerB) > 0))
         print "Player B wins the card!"
         playerB.append(playerB[0])
         playerB.append(playerA[0])
-    del.playerA[0]
-    del.playerB[0]
+    del playerA[0]
+    del playerB[0]
     print ("Player A has " + str(len(playerA)) + " cards!")
     print ("Player B has " + str(len(playerB)) + " cards!") 
 if len(playerA) == 0
