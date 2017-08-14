@@ -4,13 +4,7 @@ import random
 
 
 def create_deck():
-    deck = []
-
-    for n in range(13):
-        for _ in range(4):
-            deck.append(n)
-
-    return deck
+    return [n for n in range(13) for _ in range(4)]
 
 
 class Player:
